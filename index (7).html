@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Memorial Academy — Creche to JHS</title>
+<meta name="description" content="Daniel Memorial Academy — Creche through Junior High School. Rooted in character, rising in excellence.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  #hero {
+    position: relative;
+    background: radial-gradient(ellipse at 20% 0%, var(--deep-sea-2) 0%, var(--deep-sea) 55%, #082f39 100%);
+    padding: 84px 0 0; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: repeating-linear-gradient(100deg, rgba(255,255,255,0.035) 0px, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 64px);
+    opacity: .5; pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; padding-bottom: 110px; }
+  .hero-inner h1 { color: var(--sand); font-size: clamp(2.4rem, 4.6vw, 3.6rem); margin: 18px 0 22px; }
+  .hero-inner h1 em { color: var(--cream-gold); font-style: normal; }
+  .hero-lede { color: var(--sea-blue-light); font-size: 1.08rem; max-width: 46ch; margin-bottom: 34px; }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 40px; }
+  .hero-meta { display: flex; gap: 28px; flex-wrap: wrap; }
+  .hero-meta div { color: var(--sand); }
+  .hero-meta strong { font-family: 'Fraunces', serif; font-size: 1.5rem; display: block; color: var(--cream-gold); }
+  .hero-meta span { font-size: 0.8rem; color: var(--sea-blue-light); }
+  .hero-art { position: relative; }
+  .hero-card { background: var(--sand); border-radius: 20px; padding: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.35); transform: rotate(2deg); animation: float 5s ease-in-out infinite; }
+  @keyframes float { 0%,100% { transform: rotate(2deg) translateY(0); } 50% { transform: rotate(2deg) translateY(-10px); } }
+  .hero-card .tag { display:inline-block; background: var(--sea-blue-light); color: var(--deep-sea); font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; padding: 5px 11px; border-radius: 999px; margin-bottom: 14px; }
+  .hero-card h3 { font-size: 1.3rem; margin-bottom: 8px; }
+  .hero-card p { font-size: .92rem; color: #3d5652; }
+  .hero-card-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 18px; padding-top: 16px; border-top: 1px dashed rgba(21,48,43,0.2); font-size: .82rem; }
+
+  .quick-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .qlink { background: var(--white); border: 1px solid rgba(11,63,77,0.08); border-radius: 16px; padding: 26px; transition: transform .25s ease, box-shadow .25s ease; }
+  .qlink:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(11,63,77,0.12); }
+  .qlink .qicon { width: 44px; height: 44px; border-radius: 12px; background: var(--sea-blue-light); color: var(--deep-sea); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 1.1rem; }
+  .qlink h4 { font-size: 1.02rem; margin-bottom: 6px; }
+  .qlink p { font-size: .86rem; color: #3d5652; margin-bottom: 12px; }
+  .qlink .go { font-size: .82rem; font-weight: 700; color: var(--sea-blue); }
+
+  #welcome .wrap { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: start; }
+  .founder-card { background: var(--white); border: 1px solid rgba(11,63,77,0.08); border-radius: 18px; padding: 34px; box-shadow: 0 20px 45px rgba(11,63,77,0.08); }
+  .founder-avatar { width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--sea-blue), var(--deep-sea)); display: flex; align-items: center; justify-content: center; color: var(--sand); font-family: 'Fraunces', serif; font-size: 1.3rem; font-weight: 700; margin-bottom: 18px; }
+  .founder-card blockquote { font-family: 'Fraunces', serif; font-size: 1.18rem; font-weight: 500; line-height: 1.5; margin-bottom: 18px; }
+  .founder-card .who { font-size: .86rem; color: #55706b; }
+  .founder-card .who strong { color: var(--ink); display: block; font-size: .95rem; }
+  .pillars-list { display: flex; flex-direction: column; gap: 22px; margin-top: 8px; }
+  .pillar { display: flex; gap: 18px; }
+  .pillar .num { font-family: 'Fraunces', serif; font-size: 1.6rem; color: var(--cream-gold-deep); min-width: 46px; }
+  .pillar h4 { font-size: 1.08rem; margin-bottom: 6px; }
+  .pillar p { font-size: .93rem; color: #3d5652; }
+
+  @media (max-width: 960px) {
+    .hero-inner { grid-template-columns: 1fr; padding-bottom: 90px; }
+    .quick-links { grid-template-columns: repeat(2, 1fr); }
+    #welcome .wrap { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 720px) {
+    .quick-links { grid-template-columns: 1fr; }
+    .hero-ctas .btn { flex: 1 1 auto; justify-content: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg class="crest" style="width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="48" fill="#0e4f60" stroke="#e8b84b" stroke-width="2"/>
+        <path d="M20 40 Q 30 30, 40 40 T 60 40 T 80 40" stroke="#bfe3e8" stroke-width="2.5" fill="none"/>
+        <path d="M50 30 L50 65 M38 65 L62 65" stroke="#fbf3e1" stroke-width="3" stroke-linecap="round"/>
+        <path d="M50 20 L53 27 L60 27 L54 31 L56 38 L50 34 L44 38 L46 31 L40 27 L47 27 Z" fill="#e8b84b"/>
+      </svg>
+      <span class="brand-name">Daniel Memorial<span>Academy</span></span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="about.html">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="uniform.html">Uniform</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="portal.html" class="btn btn-gold"><i class="fas fa-lock"></i> Portal</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<header id="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <p class="eyebrow">Creche &middot; Nursery &middot; Primary &middot; Junior High</p>
+      <h1>Rooted in character.<br><em>Rising</em> in excellence.</h1>
+      <p class="hero-lede">Daniel Memorial Academy has guided children from their very first classroom to junior high graduation for over two decades — building strong minds and steady character, one term at a time.</p>
+      <div class="hero-ctas">
+        <a href="admissions.html" class="btn btn-gold"><i class="fas fa-feather-pointed"></i> Begin Admission</a>
+        <a href="academics.html" class="btn btn-outline"><i class="fas fa-arrow-right"></i> Explore Our Academics</a>
+      </div>
+      <div class="hero-meta">
+        <div><strong>24</strong><span>Years of Excellence</span></div>
+        <div><strong>860+</strong><span>Students Enrolled</span></div>
+        <div><strong>1:18</strong><span>Teacher-to-Student Ratio</span></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="hero-card">
+        <span class="tag">This Term</span>
+        <h3>Admissions are open for the new academic year</h3>
+        <p>We're welcoming new families into Creche through JHS 3. Visits to our campus are warmly encouraged before you apply.</p>
+        <div class="hero-card-foot">
+          <span>Closing in 6 weeks</span>
+          <a href="admissions.html" style="color:var(--sea-blue); font-weight:700;">Enquire &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wave-divider">
+    <svg viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0,64 C240,110 480,10 720,40 C960,70 1200,100 1440,50 L1440,110 L0,110 Z" fill="#fbf3e1"/></svg>
+  </div>
+</header>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="quick-links">
+      <a href="academics.html" class="qlink reveal">
+        <div class="qicon"><i class="fas fa-graduation-cap"></i></div>
+        <h4>Academic Levels</h4>
+        <p>From Creche to JHS 3, one campus, one steady journey.</p>
+        <span class="go">See the path &rarr;</span>
+      </a>
+      <a href="gallery.html" class="qlink reveal reveal-1">
+        <div class="qicon"><i class="fas fa-images"></i></div>
+        <h4>Life on Campus</h4>
+        <p>Sports day, cultural day, science fairs, and everyday classroom moments.</p>
+        <span class="go">View gallery &rarr;</span>
+      </a>
+      <a href="uniform.html" class="qlink reveal reveal-2">
+        <div class="qicon"><i class="fas fa-shirt"></i></div>
+        <h4>Uniform, in 3D</h4>
+        <p>Rotate and explore our uniform for every level, right in your browser.</p>
+        <span class="go">Explore in 3D &rarr;</span>
+      </a>
+      <a href="admissions.html" class="qlink reveal reveal-3">
+        <div class="qicon"><i class="fas fa-clipboard-list"></i></div>
+        <h4>Admissions</h4>
+        <p>Requirements, fees, and how to book your first campus visit.</p>
+        <span class="go">Start here &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="welcome" class="on-sand2">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="founder-card">
+        <div class="founder-avatar">EA</div>
+        <blockquote>&ldquo;We don't just prepare children for the next exam. We prepare them for the next twenty years.&rdquo;</blockquote>
+        <div class="who"><strong>Mrs. Esther Amoah</strong>Headmistress, Daniel Memorial Academy</div>
+      </div>
+    </div>
+    <div class="reveal reveal-1">
+      <p class="eyebrow">Our Story</p>
+      <h2>A school built on one family's promise</h2>
+      <p style="margin-top:16px; color:#3d5652; max-width:56ch;">Daniel Memorial Academy was founded in memory of Mr. Daniel Kweku Mensah, a schoolteacher who believed every child deserved a classroom where discipline and warmth could coexist. What began as a single Creche classroom has grown into a full Creche-to-JHS campus, still guided by the same conviction.</p>
+      <div class="pillars-list">
+        <div class="pillar"><span class="num">01</span><div><h4>Whole-child formation</h4><p>Academics, values, and pastoral care are treated as one curriculum, not three.</p></div></div>
+        <div class="pillar"><span class="num">02</span><div><h4>Small, known classrooms</h4><p>Every child is known by name — by their teacher, and by the head of school.</p></div></div>
+        <div class="pillar"><span class="num">03</span><div><h4>A steady hand into JHS</h4><p>The same school, the same community, from a child's first day to their BECE.</p></div></div>
+      </div>
+      <a href="about.html" class="btn btn-outline-dark btn-sm" style="margin-top:26px;">Read our full story <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<section id="stats" class="tight">
+  <div class="wrap">
+    <p class="eyebrow">The Register</p>
+    <h2 style="margin: 10px 0 34px; font-size:1.7rem;" class="reveal">Daniel Memorial, by the numbers</h2>
+    <div class="ledger reveal">
+      <div class="ledger-row">
+        <div class="ledger-item"><strong class="counter" data-target="24">0</strong><span>Years since founding</span></div>
+        <div class="ledger-item"><strong class="counter" data-target="860" data-suffix="+">0</strong><span>Students across all levels</span></div>
+        <div class="ledger-item"><strong class="counter" data-target="96" data-suffix="%">0</strong><span>BECE pass rate, last 5 years</span></div>
+        <div class="ledger-item"><strong class="counter" data-target="52">0</strong><span>Certified teaching staff</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--cream-gold);">Admissions Open</p>
+    <h2>Ready to visit Daniel Memorial Academy?</h2>
+    <p>Book a campus tour, meet a homeroom teacher, and see a classroom in session before you decide.</p>
+    <div class="cta-row">
+      <a href="admissions.html" class="btn btn-gold"><i class="fas fa-calendar-day"></i> Start Admissions</a>
+      <a href="portal.html" class="btn btn-outline"><i class="fas fa-lock"></i> Current Family Portal</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg style="width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="#0e4f60" stroke="#e8b84b" stroke-width="2"/>
+            <path d="M20 40 Q 30 30, 40 40 T 60 40 T 80 40" stroke="#bfe3e8" stroke-width="2.5" fill="none"/>
+            <path d="M50 30 L50 65 M38 65 L62 65" stroke="#fbf3e1" stroke-width="3" stroke-linecap="round"/>
+            <path d="M50 20 L53 27 L60 27 L54 31 L56 38 L50 34 L44 38 L46 31 L40 27 L47 27 Z" fill="#e8b84b"/>
+          </svg>
+          <span class="brand-name">Daniel Memorial<span>Academy</span></span>
+        </div>
+        <p class="tag">Creche through Junior High School, on one campus, since our founding two decades ago.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="academics.html">Academic Levels</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="uniform.html">Uniform</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Admissions</h5>
+        <ul>
+          <li><a href="admissions.html">Apply Now</a></li>
+          <li><a href="contact.html">Book a Visit</a></li>
+          <li><a href="portal.html">Parent Portal</a></li>
+          <li><a href="portal.html">Staff Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>12 Shoreline Road</li>
+          <li>Sekondi-Takoradi, Ghana</li>
+          <li>+233 24 000 0000</li>
+          <li>[email protected]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year"></span> Daniel Memorial Academy. All rights reserved.</span>
+      <div class="foot-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
