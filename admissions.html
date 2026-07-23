@@ -27,6 +27,14 @@
   .req-item { display: flex; gap: 14px; align-items: center; background: var(--white); border: 1px solid rgba(11,63,77,0.08); border-radius: 12px; padding: 16px 18px; }
   .req-item i { color: var(--sea-blue); font-size: 1.1rem; }
   .req-item span { font-size: .92rem; font-weight: 500; }
+
+  @media (max-width: 960px) {
+    .steps-row { grid-template-columns: repeat(2, 1fr); }
+    .req-list { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 720px) {
+    .steps-row { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>

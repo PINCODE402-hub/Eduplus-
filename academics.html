@@ -30,6 +30,18 @@
   .subj-card { padding: 22px; display: flex; align-items: center; gap: 16px; }
   .subj-card .si { width: 42px; height: 42px; border-radius: 10px; background: var(--sea-blue-light); color: var(--deep-sea); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .subj-card span { font-weight: 600; font-size: .94rem; }
+
+  @media (max-width: 960px) {
+    .path-row { grid-template-columns: repeat(2, 1fr); }
+    .subjects-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 720px) {
+    .path-row { grid-template-columns: 1fr; }
+    .subjects-grid { grid-template-columns: 1fr; }
+    .sched-row { grid-template-columns: 100px 1fr; }
+    .sched-time { padding: 14px; font-size: .82rem; }
+    .sched-activity { padding: 14px; font-size: .86rem; }
+  }
 </style>
 </head>
 <body>

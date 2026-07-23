@@ -59,6 +59,14 @@
   .item-card .ii { width: 40px; height: 40px; border-radius: 10px; background: var(--sea-blue-light); color: var(--deep-sea); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .item-card h4 { font-size: .98rem; margin-bottom: 4px; }
   .item-card p { font-size: .85rem; color: #3d5652; }
+
+  @media (max-width: 960px) {
+    .viewer-shell { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 720px) {
+    .viewer-stage { height: 400px; }
+    .item-list { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
