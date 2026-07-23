@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Daniel Memorial Academy</title>
+<meta name="description" content="Photos from campus life at Daniel Memorial Academy — academics, sports, culture, and facilities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav id="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg class="crest" style="width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="48" fill="#0e4f60" stroke="#e8b84b" stroke-width="2"/>
+        <path d="M20 40 Q 30 30, 40 40 T 60 40 T 80 40" stroke="#bfe3e8" stroke-width="2.5" fill="none"/>
+        <path d="M50 30 L50 65 M38 65 L62 65" stroke="#fbf3e1" stroke-width="3" stroke-linecap="round"/>
+        <path d="M50 20 L53 27 L60 27 L54 31 L56 38 L50 34 L44 38 L46 31 L40 27 L47 27 Z" fill="#e8b84b"/>
+      </svg>
+      <span class="brand-name">Daniel Memorial<span>Academy</span></span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="about.html">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="gallery.html" class="active">Gallery</a>
+      <a href="uniform.html">Uniform</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="portal.html" class="btn btn-gold"><i class="fas fa-lock"></i> Portal</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" style="font-size:.65rem;"></i><span>Gallery</span></div>
+    <p class="eyebrow" style="color:var(--cream-gold);">Life on Campus</p>
+    <h1>A look inside a typical term</h1>
+    <p>Sports day, cultural celebrations, science fairs, and everyday classroom moments — this is what campus life actually looks like.</p>
+  </div>
+  <div class="wave-divider"><svg viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0,64 C240,110 480,10 720,40 C960,70 1200,100 1440,50 L1440,110 L0,110 Z" fill="#fbf3e1"/></svg></div>
+</header>
+
+<section class="tight">
+  <div class="wrap">
+    <p style="background:var(--sand-2); border:1px dashed rgba(11,63,77,0.25); border-radius:12px; padding:14px 18px; font-size:.85rem; color:#3d5652; margin-bottom:34px;">
+      <i class="fas fa-circle-info" style="color:var(--sea-blue); margin-right:8px;"></i>
+      These tiles are placeholders standing in for real photographs — swap each <code>.gitem</code> for your own photo (see the comment in the page source for exactly how) once you have them.
+    </p>
+
+    <div class="gallery-filters reveal">
+      <button class="gfilter active" data-filter="all">All Photos</button>
+      <button class="gfilter" data-filter="academics">Academics</button>
+      <button class="gfilter" data-filter="sports">Sports</button>
+      <button class="gfilter" data-filter="culture">Culture</button>
+      <button class="gfilter" data-filter="facilities">Facilities</button>
+    </div>
+
+    <!--
+      HOW TO ADD A REAL PHOTO:
+      Replace the <div class="gitem-tint"><i class="fas ..."></i></div> line
+      inside any .gitem below with:
+        <img src="photos/your-photo.jpg" alt="Description" style="width:100%;height:100%;object-fit:cover;">
+      and remove the inline background/gradient styling on that .gitem —
+      the caption bar and lightbox will keep working automatically.
+    -->
+    <div class="gallery-grid">
+      <div class="gitem tall" data-cat="sports" data-title="Inter-House Sports Day" data-desc="Basic 4 relay finals, Founders' Cup 2026.">
+        <div class="gitem-tint"><i class="fas fa-person-running"></i></div>
+        <div class="gitem-caption">Inter-House Sports Day</div>
+      </div>
+      <div class="gitem wide" data-cat="academics" data-title="JHS Science Fair" data-desc="Basic 8 students presenting their water filtration projects.">
+        <div class="gitem-tint"><i class="fas fa-flask"></i></div>
+        <div class="gitem-caption">JHS Science Fair</div>
+      </div>
+      <div class="gitem" data-cat="culture" data-title="Cultural Day Drumming" data-desc="The Blue House drumming ensemble at this year's Cultural Day.">
+        <div class="gitem-tint"><i class="fas fa-drum"></i></div>
+        <div class="gitem-caption">Cultural Day</div>
+      </div>
+      <div class="gitem" data-cat="facilities" data-title="The Primary Library" data-desc="Our reading corner for Basic 1-3, refurbished this year.">
+        <div class="gitem-tint"><i class="fas fa-book"></i></div>
+        <div class="gitem-caption">Primary Library</div>
+      </div>
+      <div class="gitem" data-cat="academics" data-title="Nursery Phonics Circle" data-desc="Morning phonics time in Nursery 2.">
+        <div class="gitem-tint"><i class="fas fa-child"></i></div>
+        <div class="gitem-caption">Nursery Phonics Circle</div>
+      </div>
+      <div class="gitem wide" data-cat="facilities" data-title="Our Main Campus Block" data-desc="The Primary and JHS teaching block, viewed from the front gate.">
+        <div class="gitem-tint"><i class="fas fa-school"></i></div>
+        <div class="gitem-caption">Main Campus Block</div>
+      </div>
+      <div class="gitem tall" data-cat="culture" data-title="Founders' Day Parade" data-desc="Students marching in memory of Mr. Daniel Kweku Mensah.">
+        <div class="gitem-tint"><i class="fas fa-flag"></i></div>
+        <div class="gitem-caption">Founders' Day</div>
+      </div>
+      <div class="gitem" data-cat="sports" data-title="Inter-School Football" data-desc="JHS boys' team ahead of the regional qualifiers.">
+        <div class="gitem-tint"><i class="fas fa-futbol"></i></div>
+        <div class="gitem-caption">Inter-School Football</div>
+      </div>
+      <div class="gitem" data-cat="academics" data-title="BECE Mock Exams" data-desc="JHS 3 sitting their second mock examination of the term.">
+        <div class="gitem-tint"><i class="fas fa-pen"></i></div>
+        <div class="gitem-caption">BECE Mock Exams</div>
+      </div>
+      <div class="gitem" data-cat="facilities" data-title="The Creche Playground" data-desc="Our newest addition — a safety-surfaced play area for Creche &amp; Nursery.">
+        <div class="gitem-tint"><i class="fas fa-baby"></i></div>
+        <div class="gitem-caption">Creche Playground</div>
+      </div>
+      <div class="gitem wide" data-cat="culture" data-title="Graduation Day, JHS 3" data-desc="Last year's graduating class at their send-off ceremony.">
+        <div class="gitem-tint"><i class="fas fa-graduation-cap"></i></div>
+        <div class="gitem-caption">JHS Graduation Day</div>
+      </div>
+      <div class="gitem" data-cat="sports" data-title="Swimming Taster Sessions" data-desc="Basic 5 &amp; 6 at the community pool during PE week.">
+        <div class="gitem-tint"><i class="fas fa-person-swimming"></i></div>
+        <div class="gitem-caption">Swimming Taster</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--cream-gold);">Come See It Live</p>
+    <h2>Photos are nice. Being here is better.</h2>
+    <p>Book a campus visit and see these moments happening in real time.</p>
+    <div class="cta-row">
+      <a href="admissions.html" class="btn btn-gold"><i class="fas fa-calendar-day"></i> Book a Visit</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg style="width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="#0e4f60" stroke="#e8b84b" stroke-width="2"/>
+            <path d="M20 40 Q 30 30, 40 40 T 60 40 T 80 40" stroke="#bfe3e8" stroke-width="2.5" fill="none"/>
+            <path d="M50 30 L50 65 M38 65 L62 65" stroke="#fbf3e1" stroke-width="3" stroke-linecap="round"/>
+            <path d="M50 20 L53 27 L60 27 L54 31 L56 38 L50 34 L44 38 L46 31 L40 27 L47 27 Z" fill="#e8b84b"/>
+          </svg>
+          <span class="brand-name">Daniel Memorial<span>Academy</span></span>
+        </div>
+        <p class="tag">Creche through Junior High School, on one campus, since our founding two decades ago.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="academics.html">Academic Levels</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="uniform.html">Uniform</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Admissions</h5>
+        <ul>
+          <li><a href="admissions.html">Apply Now</a></li>
+          <li><a href="contact.html">Book a Visit</a></li>
+          <li><a href="portal.html">Parent Portal</a></li>
+          <li><a href="portal.html">Staff Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>12 Shoreline Road</li>
+          <li>Sekondi-Takoradi, Ghana</li>
+          <li>+233 24 000 0000</li>
+          <li>[email protected]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year"></span> Daniel Memorial Academy. All rights reserved.</span>
+      <div class="foot-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close"><i class="fas fa-xmark"></i></button>
+  <div class="lightbox-inner">
+    <div class="lightbox-media"><i class="fas fa-image"></i></div>
+    <div class="lightbox-body">
+      <h4></h4>
+      <p></p>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

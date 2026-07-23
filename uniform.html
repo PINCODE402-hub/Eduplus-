@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uniform | Daniel Memorial Academy</title>
+<meta name="description" content="Explore the Daniel Memorial Academy uniform in an interactive 3D preview, plus sizing and purchase information.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .viewer-shell {
+    display: grid; grid-template-columns: 1fr 300px; gap: 24px; align-items: stretch;
+  }
+  .viewer-stage {
+    position: relative; background: linear-gradient(180deg, #eef6f3, var(--sand-2));
+    border-radius: 20px; overflow: hidden; border: 1px solid rgba(11,63,77,0.08);
+    height: 520px;
+  }
+  .viewer-stage canvas { display: block; width: 100% !important; height: 100% !important; }
+  .viewer-hint {
+    position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%);
+    background: rgba(11,63,77,0.85); color: var(--sand); font-size: .78rem; padding: 8px 16px;
+    border-radius: 999px; display: flex; align-items: center; gap: 8px; pointer-events: none;
+    transition: opacity .4s ease;
+  }
+  .viewer-loading {
+    position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 12px; color: var(--deep-sea); font-size: .9rem; background: var(--sand-2);
+  }
+  .viewer-loading .spinner {
+    width: 34px; height: 34px; border-radius: 50%; border: 3px solid rgba(11,63,77,0.15); border-top-color: var(--sea-blue);
+    animation: spin 0.9s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .viewer-fallback { display: none; }
+
+  .viewer-controls { display: flex; flex-direction: column; gap: 18px; }
+  .control-card { background: var(--white); border: 1px solid rgba(11,63,77,0.08); border-radius: 16px; padding: 20px; }
+  .control-card h5 { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--cream-gold-deep); font-weight: 700; margin-bottom: 12px; }
+  .toggle-row { display: flex; gap: 8px; }
+  .toggle-btn {
+    flex: 1; padding: 10px; border-radius: 10px; border: 1.5px solid rgba(11,63,77,0.16);
+    font-size: .86rem; font-weight: 600; color: var(--deep-sea); transition: all .2s ease; text-align: center;
+  }
+  .toggle-btn.active { background: var(--deep-sea); color: var(--sand); border-color: var(--deep-sea); }
+  .icon-btn-row { display: flex; gap: 10px; }
+  .icon-btn {
+    flex: 1; padding: 10px; border-radius: 10px; border: 1.5px solid rgba(11,63,77,0.16);
+    font-size: .82rem; font-weight: 600; color: var(--deep-sea); display: flex; align-items: center; justify-content: center; gap: 6px;
+    transition: all .2s ease;
+  }
+  .icon-btn:hover, .icon-btn.active { background: var(--sea-blue-light); border-color: var(--sea-blue); }
+
+  .item-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .item-card { padding: 22px; display: flex; gap: 14px; align-items: flex-start; }
+  .item-card .ii { width: 40px; height: 40px; border-radius: 10px; background: var(--sea-blue-light); color: var(--deep-sea); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .item-card h4 { font-size: .98rem; margin-bottom: 4px; }
+  .item-card p { font-size: .85rem; color: #3d5652; }
+</style>
+</head>
+<body>
+
+<nav id="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg class="crest" style="width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="48" fill="#0e4f60" stroke="#e8b84b" stroke-width="2"/>
+        <path d="M20 40 Q 30 30, 40 40 T 60 40 T 80 40" stroke="#bfe3e8" stroke-width="2.5" fill="none"/>
+        <path d="M50 30 L50 65 M38 65 L62 65" stroke="#fbf3e1" stroke-width="3" stroke-linecap="round"/>
+        <path d="M50 20 L53 27 L60 27 L54 31 L56 38 L50 34 L44 38 L46 31 L40 27 L47 27 Z" fill="#e8b84b"/>
+      </svg>
+      <span class="brand-name">Daniel Memorial<span>Academy</span></span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="about.html">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="uniform.html" class="active">Uniform</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="portal.html" class="btn btn-gold"><i class="fas fa-lock"></i> Portal</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" style="font-size:.65rem;"></i><span>Uniform</span></div>
+    <p class="eyebrow" style="color:var(--cream-gold);">See Before You Sew</p>
+    <h1>Our uniform, in interactive 3D</h1>
+    <p>Drag to rotate, scroll to zoom, and switch between Boys/Girls and Primary/JHS styling — a genuine 3D preview, built right into this page.</p>
+  </div>
+  <div class="wave-divider"><svg viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0,64 C240,110 480,10 720,40 C960,70 1200,100 1440,50 L1440,110 L0,110 Z" fill="#fbf3e1"/></svg></div>
+</header>
+
+<section class="tight">
+  <div class="wrap">
+    <div class="viewer-shell reveal">
+      <div class="viewer-stage" id="viewer-stage">
+        <div class="viewer-loading" id="viewer-loading">
+          <div class="spinner"></div>
+          <span>Loading 3D preview&hellip;</span>
+        </div>
+        <div class="viewer-hint" id="viewer-hint"><i class="fas fa-arrows-rotate"></i> Drag to rotate &middot; Scroll to zoom</div>
+      </div>
+      <div class="viewer-controls">
+        <div class="control-card">
+          <h5>Uniform For</h5>
+          <div class="toggle-row">
+            <button class="toggle-btn active" id="btn-boys" type="button">Boys</button>
+            <button class="toggle-btn" id="btn-girls" type="button">Girls</button>
+          </div>
+        </div>
+        <div class="control-card">
+          <h5>School Level</h5>
+          <div class="toggle-row">
+            <button class="toggle-btn active" id="btn-primary" type="button">Primary</button>
+            <button class="toggle-btn" id="btn-jhs" type="button">JHS</button>
+          </div>
+        </div>
+        <div class="control-card">
+          <h5>View</h5>
+          <div class="icon-btn-row">
+            <button class="icon-btn" id="btn-autorotate" type="button"><i class="fas fa-rotate"></i> Auto-spin</button>
+            <button class="icon-btn" id="btn-reset" type="button"><i class="fas fa-arrows-to-dot"></i> Reset</button>
+          </div>
+        </div>
+        <p style="font-size:.8rem; color:#55706b; padding: 0 4px;">This is a stylized 3D representation to give you a feel for colors and cut — not a photographic scan of the actual garment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-sand2">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">What's Included</p>
+      <h2>Each uniform set includes</h2>
+    </div>
+    <div class="item-list">
+      <div class="item-card value-card reveal"><div class="ii"><i class="fas fa-shirt"></i></div><div><h4>Checked Shirt / Blouse</h4><p>Sea-blue check for Primary; solid navy with school crest for JHS.</p></div></div>
+      <div class="item-card value-card reveal reveal-1"><div class="ii"><i class="fas fa-socks"></i></div><div><h4>Bottom Wear</h4><p>Khaki shorts (boys) or pleated skirt (girls), cream-gold trim.</p></div></div>
+      <div class="item-card value-card reveal reveal-2"><div class="ii"><i class="fas fa-ribbon"></i></div><div><h4>House Tie</h4><p>JHS students wear a house-colored tie; Primary students do not.</p></div></div>
+      <div class="item-card value-card reveal reveal-3"><div class="ii"><i class="fas fa-shoe-prints"></i></div><div><h4>Footwear</h4><p>Black school shoes and plain white socks, worn daily.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap grid-2">
+    <div class="contact-info-card reveal">
+      <h3 style="font-size:1.15rem; margin-bottom:16px;">Where to purchase</h3>
+      <div class="contact-line"><div class="ic"><i class="fas fa-store"></i></div><div><strong>Approved Supplier</strong><span>Shoreline Uniforms &amp; Textiles, Market Circle, Takoradi</span></div></div>
+      <div class="contact-line"><div class="ic"><i class="fas fa-school"></i></div><div><strong>On Campus</strong><span>Limited stock available at the school office, Mon&ndash;Fri 8am&ndash;2pm</span></div></div>
+      <div class="contact-line"><div class="ic"><i class="fas fa-ruler"></i></div><div><strong>Sizing</strong><span>Bring your child for a fitting during your campus visit — no need to guess sizes in advance</span></div></div>
+    </div>
+    <div class="contact-info-card reveal reveal-1">
+      <h3 style="font-size:1.15rem; margin-bottom:16px;">Good to know</h3>
+      <div class="contact-line"><div class="ic"><i class="fas fa-circle-check"></i></div><div><strong>Two full sets recommended</strong><span>So one is always clean and ready while the other is being washed</span></div></div>
+      <div class="contact-line"><div class="ic"><i class="fas fa-circle-check"></i></div><div><strong>Name tags required</strong><span>Please label all uniform items — lost property is sorted weekly</span></div></div>
+      <div class="contact-line"><div class="ic"><i class="fas fa-circle-check"></i></div><div><strong>PE kit</strong><span>A separate plain white t-shirt and shorts, worn only on PE days</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--cream-gold);">Ready to Take the Next Step</p>
+    <h2>Start your child's admission today</h2>
+    <p>Uniform fittings are handled during your first campus visit — no need to sort this out beforehand.</p>
+    <div class="cta-row"><a href="admissions.html" class="btn btn-gold"><i class="fas fa-calendar-day"></i> Begin Admission</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg style="width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="#0e4f60" stroke="#e8b84b" stroke-width="2"/>
+            <path d="M20 40 Q 30 30, 40 40 T 60 40 T 80 40" stroke="#bfe3e8" stroke-width="2.5" fill="none"/>
+            <path d="M50 30 L50 65 M38 65 L62 65" stroke="#fbf3e1" stroke-width="3" stroke-linecap="round"/>
+            <path d="M50 20 L53 27 L60 27 L54 31 L56 38 L50 34 L44 38 L46 31 L40 27 L47 27 Z" fill="#e8b84b"/>
+          </svg>
+          <span class="brand-name">Daniel Memorial<span>Academy</span></span>
+        </div>
+        <p class="tag">Creche through Junior High School, on one campus, since our founding two decades ago.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="academics.html">Academic Levels</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="uniform.html">Uniform</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Admissions</h5>
+        <ul>
+          <li><a href="admissions.html">Apply Now</a></li>
+          <li><a href="contact.html">Book a Visit</a></li>
+          <li><a href="portal.html">Parent Portal</a></li>
+          <li><a href="portal.html">Staff Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>12 Shoreline Road</li>
+          <li>Sekondi-Takoradi, Ghana</li>
+          <li>+233 24 000 0000</li>
+          <li>[email protected]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year"></span> Daniel Memorial Academy. All rights reserved.</span>
+      <div class="foot-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://unpkg.com/[email protected]/examples/js/controls/OrbitControls.js"></script>
+<script src="uniform-3d.js"></script>
+</body>
+</html>

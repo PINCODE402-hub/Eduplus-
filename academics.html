@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academics | Daniel Memorial Academy</title>
+<meta name="description" content="From Creche to JHS 3 — academic levels, curriculum, and a typical day at Daniel Memorial Academy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .path-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .path-step .stage-num { width: 68px; height: 68px; border-radius: 50%; background: var(--deep-sea); color: var(--cream-gold); display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 18px; }
+  .path-card { padding: 24px; height: 100%; }
+  .path-card .age { font-size: .78rem; color: var(--cream-gold-deep); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 6px; }
+  .path-card h4 { font-size: 1.15rem; margin-bottom: 8px; }
+  .path-card p { font-size: .89rem; color: #3d5652; margin-bottom: 12px; }
+  .path-card ul { font-size: .85rem; color: #3d5652; }
+  .path-card ul li { display: flex; gap: 8px; margin-bottom: 6px; }
+  .path-card ul li i { color: var(--sea-blue); margin-top: 3px; font-size: .75rem; }
+
+  .schedule { border-top: 1px solid rgba(11,63,77,0.15); }
+  .sched-row { display: grid; grid-template-columns: 140px 1fr; border-bottom: 1px solid rgba(11,63,77,0.15); }
+  .sched-time { padding: 18px 20px; font-weight: 700; font-size: .88rem; color: var(--deep-sea); background: var(--sand-2); }
+  .sched-activity { padding: 18px 20px; font-size: .92rem; color: #3d5652; display: flex; align-items: center; }
+
+  .subjects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .subj-card { padding: 22px; display: flex; align-items: center; gap: 16px; }
+  .subj-card .si { width: 42px; height: 42px; border-radius: 10px; background: var(--sea-blue-light); color: var(--deep-sea); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .subj-card span { font-weight: 600; font-size: .94rem; }
+</style>
+</head>
+<body>
+
+<nav id="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg class="crest" style="width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="48" fill="#0e4f60" stroke="#e8b84b" stroke-width="2"/>
+        <path d="M20 40 Q 30 30, 40 40 T 60 40 T 80 40" stroke="#bfe3e8" stroke-width="2.5" fill="none"/>
+        <path d="M50 30 L50 65 M38 65 L62 65" stroke="#fbf3e1" stroke-width="3" stroke-linecap="round"/>
+        <path d="M50 20 L53 27 L60 27 L54 31 L56 38 L50 34 L44 38 L46 31 L40 27 L47 27 Z" fill="#e8b84b"/>
+      </svg>
+      <span class="brand-name">Daniel Memorial<span>Academy</span></span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="about.html">About</a>
+      <a href="academics.html" class="active">Academics</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="uniform.html">Uniform</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="portal.html" class="btn btn-gold"><i class="fas fa-lock"></i> Portal</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" style="font-size:.65rem;"></i><span>Academics</span></div>
+    <p class="eyebrow" style="color:var(--cream-gold);">One Campus, One Journey</p>
+    <h1>From first steps to junior high</h1>
+    <p>A child can begin at Daniel Memorial in Creche and graduate JHS 3 from the very same campus — the same community, watching them grow the whole way.</p>
+  </div>
+  <div class="wave-divider"><svg viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0,64 C240,110 480,10 720,40 C960,70 1200,100 1440,50 L1440,110 L0,110 Z" fill="#fbf3e1"/></svg></div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="path-row">
+      <div class="path-step reveal">
+        <div class="stage-num">1</div>
+        <div class="path-card value-card">
+          <p class="age">Ages 6 months &ndash; 2 yrs</p>
+          <h4>Creche</h4>
+          <p>A warm, secure first environment away from home, focused on care, comfort, and early sensory play.</p>
+          <ul><li><i class="fas fa-circle"></i>Nap &amp; feeding routines matched to each child</li><li><i class="fas fa-circle"></i>Sensory play &amp; early motor skills</li></ul>
+        </div>
+      </div>
+      <div class="path-step reveal reveal-1">
+        <div class="stage-num">2</div>
+        <div class="path-card value-card">
+          <p class="age">Ages 3 &ndash; 5</p>
+          <h4>Nursery 1 &amp; 2</h4>
+          <p>Where curiosity gets its first structure — letters, numbers, songs, and the beginnings of independence.</p>
+          <ul><li><i class="fas fa-circle"></i>Phonics &amp; early numeracy</li><li><i class="fas fa-circle"></i>Music, movement &amp; social play</li></ul>
+        </div>
+      </div>
+      <div class="path-step reveal reveal-2">
+        <div class="stage-num">3</div>
+        <div class="path-card value-card">
+          <p class="age">Basic 1 &ndash; 6</p>
+          <h4>Primary School</h4>
+          <p>A full academic foundation in literacy, numeracy, science and creative arts, alongside daily character formation.</p>
+          <ul><li><i class="fas fa-circle"></i>English, Maths, Science, ICT &amp; French</li><li><i class="fas fa-circle"></i>Creative arts &amp; physical education</li></ul>
+        </div>
+      </div>
+      <div class="path-step reveal reveal-3">
+        <div class="stage-num">4</div>
+        <div class="path-card value-card">
+          <p class="age">Basic 7 &ndash; 9</p>
+          <h4>Junior High School</h4>
+          <p>Rigorous preparation for the BECE, with mentorship toward each student's next school and next chapter.</p>
+          <ul><li><i class="fas fa-circle"></i>Full BECE subject curriculum</li><li><i class="fas fa-circle"></i>Career &amp; senior high mentorship</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-sand2">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Core Curriculum</p>
+      <h2>What every student studies</h2>
+      <p>Alongside level-specific subjects, every child at Daniel Memorial builds fluency across these core areas.</p>
+    </div>
+    <div class="subjects-grid">
+      <div class="subj-card reveal"><div class="si"><i class="fas fa-book"></i></div><span>English Language</span></div>
+      <div class="subj-card reveal reveal-1"><div class="si"><i class="fas fa-calculator"></i></div><span>Mathematics</span></div>
+      <div class="subj-card reveal reveal-2"><div class="si"><i class="fas fa-flask"></i></div><span>Integrated Science</span></div>
+      <div class="subj-card reveal"><div class="si"><i class="fas fa-globe-africa"></i></div><span>Social Studies</span></div>
+      <div class="subj-card reveal reveal-1"><div class="si"><i class="fas fa-laptop-code"></i></div><span>Computing / ICT</span></div>
+      <div class="subj-card reveal reveal-2"><div class="si"><i class="fas fa-language"></i></div><span>French</span></div>
+      <div class="subj-card reveal"><div class="si"><i class="fas fa-palette"></i></div><span>Creative Arts</span></div>
+      <div class="subj-card reveal reveal-1"><div class="si"><i class="fas fa-person-running"></i></div><span>Physical Education</span></div>
+      <div class="subj-card reveal reveal-2"><div class="si"><i class="fas fa-hands-praying"></i></div><span>Religious &amp; Moral Education</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">A Typical Day</p>
+      <h2>What the school day looks like</h2>
+      <p>Shown here for our Primary section — Creche and Nursery run a gentler, more flexible version of this rhythm.</p>
+    </div>
+    <div class="schedule reveal">
+      <div class="sched-row"><div class="sched-time">7:00 AM</div><div class="sched-activity">Arrival, assembly &amp; morning devotion</div></div>
+      <div class="sched-row"><div class="sched-time">7:30 AM</div><div class="sched-activity">Period 1 &ndash; 2: Core subjects (English / Maths)</div></div>
+      <div class="sched-row"><div class="sched-time">9:30 AM</div><div class="sched-activity">Break &amp; snack</div></div>
+      <div class="sched-row"><div class="sched-time">10:00 AM</div><div class="sched-activity">Period 3 &ndash; 4: Science, Social Studies or ICT</div></div>
+      <div class="sched-row"><div class="sched-time">12:00 PM</div><div class="sched-activity">Lunch</div></div>
+      <div class="sched-row"><div class="sched-time">1:00 PM</div><div class="sched-activity">Period 5 &ndash; 6: Creative arts, PE, or French</div></div>
+      <div class="sched-row"><div class="sched-time">2:30 PM</div><div class="sched-activity">Clubs, remedial support &amp; dismissal</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--cream-gold);">See It In Person</p>
+    <h2>Sit in on a class before you decide</h2>
+    <p>The best way to judge a curriculum is to watch it being taught. We'll happily arrange it.</p>
+    <div class="cta-row">
+      <a href="admissions.html" class="btn btn-gold"><i class="fas fa-calendar-day"></i> Book a Visit</a>
+      <a href="gallery.html" class="btn btn-outline"><i class="fas fa-images"></i> See the Gallery</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg style="width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="#0e4f60" stroke="#e8b84b" stroke-width="2"/>
+            <path d="M20 40 Q 30 30, 40 40 T 60 40 T 80 40" stroke="#bfe3e8" stroke-width="2.5" fill="none"/>
+            <path d="M50 30 L50 65 M38 65 L62 65" stroke="#fbf3e1" stroke-width="3" stroke-linecap="round"/>
+            <path d="M50 20 L53 27 L60 27 L54 31 L56 38 L50 34 L44 38 L46 31 L40 27 L47 27 Z" fill="#e8b84b"/>
+          </svg>
+          <span class="brand-name">Daniel Memorial<span>Academy</span></span>
+        </div>
+        <p class="tag">Creche through Junior High School, on one campus, since our founding two decades ago.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="academics.html">Academic Levels</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="uniform.html">Uniform</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Admissions</h5>
+        <ul>
+          <li><a href="admissions.html">Apply Now</a></li>
+          <li><a href="contact.html">Book a Visit</a></li>
+          <li><a href="portal.html">Parent Portal</a></li>
+          <li><a href="portal.html">Staff Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>12 Shoreline Road</li>
+          <li>Sekondi-Takoradi, Ghana</li>
+          <li>+233 24 000 0000</li>
+          <li>[email protected]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year"></span> Daniel Memorial Academy. All rights reserved.</span>
+      <div class="foot-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

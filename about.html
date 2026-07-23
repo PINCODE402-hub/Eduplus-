@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Daniel Memorial Academy</title>
+<meta name="description" content="The story, mission, and leadership behind Daniel Memorial Academy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .story-block { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .story-figure {
+    background: linear-gradient(135deg, var(--sea-blue), var(--deep-sea)); border-radius: 20px; height: 340px;
+    display: flex; align-items: center; justify-content: center; color: rgba(251,243,225,0.4); font-size: 3rem;
+    position: relative; overflow: hidden;
+  }
+  .story-figure::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60px;
+    background: url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1440 60%22%3E%3Cpath d=%22M0,32 C240,60 480,4 720,20 C960,36 1200,50 1440,24 L1440,60 L0,60 Z%22 fill=%22%23fbf3e1%22 opacity=%220.15%22/%3E%3C/svg%3E') repeat-x;
+  }
+  .mission-vision { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .mv-card { padding: 34px; }
+  .mv-card .value-icon { margin-bottom: 20px; }
+  .mv-card h3 { font-size: 1.3rem; margin-bottom: 12px; }
+  .mv-card p { color: #3d5652; font-size: .96rem; }
+</style>
+</head>
+<body>
+
+<nav id="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <svg class="crest" style="width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="50" r="48" fill="#0e4f60" stroke="#e8b84b" stroke-width="2"/>
+        <path d="M20 40 Q 30 30, 40 40 T 60 40 T 80 40" stroke="#bfe3e8" stroke-width="2.5" fill="none"/>
+        <path d="M50 30 L50 65 M38 65 L62 65" stroke="#fbf3e1" stroke-width="3" stroke-linecap="round"/>
+        <path d="M50 20 L53 27 L60 27 L54 31 L56 38 L50 34 L44 38 L46 31 L40 27 L47 27 Z" fill="#e8b84b"/>
+      </svg>
+      <span class="brand-name">Daniel Memorial<span>Academy</span></span>
+    </a>
+    <div class="nav-links" id="nav-links">
+      <a href="about.html" class="active">About</a>
+      <a href="academics.html">Academics</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="uniform.html">Uniform</a>
+      <a href="admissions.html">Admissions</a>
+      <a href="contact.html">Contact</a>
+      <a href="portal.html" class="btn btn-gold"><i class="fas fa-lock"></i> Portal</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a><i class="fas fa-chevron-right" style="font-size:.65rem;"></i><span>About</span></div>
+    <p class="eyebrow" style="color:var(--cream-gold);">Our Story</p>
+    <h1>Two decades of keeping one promise</h1>
+    <p>Founded in memory of a schoolteacher who believed discipline and warmth could live in the same classroom.</p>
+  </div>
+  <div class="wave-divider"><svg viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0,64 C240,110 480,10 720,40 C960,70 1200,100 1440,50 L1440,110 L0,110 Z" fill="#fbf3e1"/></svg></div>
+</header>
+
+<section>
+  <div class="wrap story-block">
+    <div class="reveal">
+      <p class="eyebrow">How We Began</p>
+      <h2 style="margin:10px 0 18px; font-size:1.9rem;">One classroom, one conviction</h2>
+      <p style="color:#3d5652; margin-bottom:16px;">Daniel Memorial Academy takes its name from Mr. Daniel Kweku Mensah, a village schoolteacher known for two things in equal measure: how firmly he held his students to a standard, and how gently he noticed when one of them was struggling at home.</p>
+      <p style="color:#3d5652; margin-bottom:16px;">After his passing, his family and former students pooled resources to open a single Creche classroom in his name — determined that his approach to teaching shouldn't end with him. Twenty-four years later, that one classroom has grown into a full campus carrying children from their very first day of school through to JHS graduation.</p>
+      <p style="color:#3d5652;">The name on the gate has stayed the same. So has the conviction behind it.</p>
+    </div>
+    <div class="story-figure reveal reveal-1"><i class="fas fa-landmark"></i></div>
+  </div>
+</section>
+
+<section class="on-sand2">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="text-align:center;">What Guides Us</p>
+      <h2>Mission &amp; Vision</h2>
+    </div>
+    <div class="mission-vision">
+      <div class="mv-card reveal reveal-1">
+        <div class="value-icon"><i class="fas fa-bullseye"></i></div>
+        <h3>Our Mission</h3>
+        <p>To provide every child, from Creche through JHS 3, with a rigorous academic foundation and a steady moral compass — delivered by teachers who know each student by name, not just by grade.</p>
+      </div>
+      <div class="mv-card reveal reveal-2">
+        <div class="value-icon"><i class="fas fa-eye"></i></div>
+        <h3>Our Vision</h3>
+        <p>To be the school families trust with their child's entire basic education journey — known as much for the character of our graduates as for their results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="values">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Our Values</p>
+      <h2>Four things we never compromise on</h2>
+    </div>
+    <div class="grid-4">
+      <div class="value-card reveal" style="padding:28px;">
+        <div class="value-icon" style="background:var(--sea-blue-light); color:var(--deep-sea);"><i class="fas fa-book-open"></i></div>
+        <h4 style="margin-bottom:8px;">Academic Rigor</h4>
+        <p style="font-size:.88rem; color:#3d5652;">Real accountability — regular assessment, and results parents can see and understand.</p>
+      </div>
+      <div class="value-card reveal reveal-1" style="padding:28px;">
+        <div class="value-icon" style="background:var(--sea-blue-light); color:var(--deep-sea);"><i class="fas fa-hands-holding-child"></i></div>
+        <h4 style="margin-bottom:8px;">Pastoral Care</h4>
+        <p style="font-size:.88rem; color:#3d5652;">Every class has a homeroom teacher who knows each child's story, not just their grade sheet.</p>
+      </div>
+      <div class="value-card reveal reveal-2" style="padding:28px;">
+        <div class="value-icon" style="background:var(--sea-blue-light); color:var(--deep-sea);"><i class="fas fa-shield-heart"></i></div>
+        <h4 style="margin-bottom:8px;">Safety First</h4>
+        <p style="font-size:.88rem; color:#3d5652;">A gated, supervised campus with sign-in/sign-out procedures parents rely on daily.</p>
+      </div>
+      <div class="value-card reveal reveal-3" style="padding:28px;">
+        <div class="value-icon" style="background:var(--sea-blue-light); color:var(--deep-sea);"><i class="fas fa-music"></i></div>
+        <h4 style="margin-bottom:8px;">Beyond the Classroom</h4>
+        <p style="font-size:.88rem; color:#3d5652;">Sports, music, drama and clubs — because character grows outside the syllabus too.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="on-sand2">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Leadership</p>
+      <h2>The people steering the ship</h2>
+    </div>
+    <div class="grid-4">
+      <div class="team-card reveal">
+        <div class="team-avatar">EA</div>
+        <h4>Esther Amoah</h4>
+        <p class="role">Headmistress</p>
+        <p>24 years in basic education, 11 of them at Daniel Memorial.</p>
+      </div>
+      <div class="team-card reveal reveal-1">
+        <div class="team-avatar">KM</div>
+        <h4>Kwesi Mensah</h4>
+        <p class="role">Deputy Head, Academics</p>
+        <p>Oversees curriculum standards across all four levels.</p>
+      </div>
+      <div class="team-card reveal reveal-2">
+        <div class="team-avatar">AB</div>
+        <h4>Abena Boateng</h4>
+        <p class="role">Head of Primary</p>
+        <p>Leads Basic 1&ndash;6, with a focus on literacy foundations.</p>
+      </div>
+      <div class="team-card reveal reveal-3">
+        <div class="team-avatar">JO</div>
+        <h4>John Owusu</h4>
+        <p class="role">Head of JHS</p>
+        <p>Guides Basic 7&ndash;9 students through BECE preparation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--cream-gold);">See It For Yourself</p>
+    <h2>Come meet the people behind the promise</h2>
+    <p>A campus visit tells you more in twenty minutes than any website can.</p>
+    <div class="cta-row">
+      <a href="admissions.html" class="btn btn-gold"><i class="fas fa-calendar-day"></i> Book a Visit</a>
+      <a href="academics.html" class="btn btn-outline"><i class="fas fa-graduation-cap"></i> See Our Academics</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg style="width:40px;height:40px" viewBox="0 0 100 100" aria-hidden="true">
+            <circle cx="50" cy="50" r="48" fill="#0e4f60" stroke="#e8b84b" stroke-width="2"/>
+            <path d="M20 40 Q 30 30, 40 40 T 60 40 T 80 40" stroke="#bfe3e8" stroke-width="2.5" fill="none"/>
+            <path d="M50 30 L50 65 M38 65 L62 65" stroke="#fbf3e1" stroke-width="3" stroke-linecap="round"/>
+            <path d="M50 20 L53 27 L60 27 L54 31 L56 38 L50 34 L44 38 L46 31 L40 27 L47 27 Z" fill="#e8b84b"/>
+          </svg>
+          <span class="brand-name">Daniel Memorial<span>Academy</span></span>
+        </div>
+        <p class="tag">Creche through Junior High School, on one campus, since our founding two decades ago.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="academics.html">Academic Levels</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="uniform.html">Uniform</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Admissions</h5>
+        <ul>
+          <li><a href="admissions.html">Apply Now</a></li>
+          <li><a href="contact.html">Book a Visit</a></li>
+          <li><a href="portal.html">Parent Portal</a></li>
+          <li><a href="portal.html">Staff Portal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li>12 Shoreline Road</li>
+          <li>Sekondi-Takoradi, Ghana</li>
+          <li>+233 24 000 0000</li>
+          <li>[email protected]</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year"></span> Daniel Memorial Academy. All rights reserved.</span>
+      <div class="foot-social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
